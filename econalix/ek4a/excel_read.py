@@ -1,10 +1,11 @@
 import pandas as pd
 from pathlib import Path
-import json
+import json, os
 
 def excel_read_and_save(pageName):
     try:
-        xls = pd.read_excel(r'.\excel_file\ek_4A_08.07.2021.xlsx',sheet_name=pageName)
+        path = os.getcwd()
+        xls = pd.read_excel(path + r'\excel_file\ek_4A_08.07.2021.xlsx',sheet_name=pageName)
         df = pd.DataFrame(xls, columns=xls.columns) 
         df = df.assign( **df.select_dtypes(['datetime']).astype(str).to_dict('list') ).to_json(orient="records")
         parsed = json.loads(df)  

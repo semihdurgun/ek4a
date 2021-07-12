@@ -12,7 +12,6 @@ def index(request, *args, **kwargs):
     a_date = datetime.date(2021, 7, 9)
     week_number = a_date.isocalendar()[1]
     print(week_number)
-    excel_read_and_save('in')
     return render(request, 'index.html',) #{'weekday':week_number} <!-- <a href="{% url 'ek4a:json_cikarilan' tarih=25 %}"> -->
 
 def json_duzenlenen(request):

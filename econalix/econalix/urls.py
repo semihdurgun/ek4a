@@ -19,5 +19,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ek4a.urls')),
+    path('ek4a/', include('ek4a.urls')),
+    path('yurtdisi/', include('yurtdisi.urls')),
 ]

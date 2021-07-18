@@ -9,10 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Create your views here.
 
 def index(request, *args, **kwargs):
-    a_date = datetime.date(2021, 7, 9)
-    week_number = a_date.isocalendar()[1]
-    print(week_number)
-    return render(request, 'index.html',) #{'weekday':week_number} <!-- <a href="{% url 'ek4a:json_cikarilan' tarih=25 %}"> -->
+    return render(request, 'index.html',) # <!-- <a href="{% url 'ek4a:json_cikarilan' tarih=25 %}"> -->
 
 def json_duzenlenen(request):
     data = {
@@ -55,9 +52,6 @@ def json_bant_dahil_edilen(request):
         "data":excel_read_and_save('4A BANT HESABA DAHİL EDİLENLER')
     }
     return JsonResponse(data)
-
-    
-
 
 
        

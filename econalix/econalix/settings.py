@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ek4a'
+    'ek4a',
+    'yurtdisi'
 ]
 
 MIDDLEWARE = [

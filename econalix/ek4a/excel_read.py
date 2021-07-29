@@ -15,7 +15,7 @@ def excel_read_and_save(pageName,year,week):
         parsed = []    
     except FileNotFoundError as e:
         print( e)
-        return -1  
+        return e 
 
     return parsed
         

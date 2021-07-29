@@ -1,7 +1,6 @@
 from econalix.settings import BASE_DIR
 from django.shortcuts import render
 import json
-from pathlib import Path
 
 # Create your views here.
 

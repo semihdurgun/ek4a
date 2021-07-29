@@ -498,31 +498,17 @@ tr.shown td.details-control:before {
 <br>
 
 <div class="hk-pg-header">
+
 <div class="col-md-2 my-15">
-
-
-
-<i class="ion ion-md-arrow-dropleft-circle"></i>
-<span>Önceki hafta</span>
-</a>
 </div>
+
 <div class="col-md-8">
 <h5 class="text-center">Yurt Dışı Sorgulama</h5>
 </div>
+
 <div class="col-md-2 text-right mt-15">
-<form method="POST">
-    {% csrf_token %}
-    <p>Barkod Numarası Giriniz:</p> 
-    <input type='number' name='my_barcode' 
-        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-        type = "number"
-        maxlength = "15"> 
-    </input>
-    <div class="form-group">
-        <button class="btn btn-primary text-uppercase mt-5" id="submitButton" type="submit">Ara!</button>
-    </div>
-</form>
 </div>
+
 </div>
 
 <div class="row">
@@ -532,13 +518,18 @@ tr.shown td.details-control:before {
 <p class="mb-40"></p>
 <div class="row">
 <div class="col-sm">
-<div id="price-change-factory_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%%;"><thead class="thead-secondary">
-<tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 899.645px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 112.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 196.009px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-eklenen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-factory_info"><thead class="thead-secondary">
-<tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 899.645px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 112.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 196.009px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th></tr>
-</thead>
+<table id="price-change-eklenen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Barkod</th>
+<th>Ürün Adı</th>
+<th>Fiyat (€)</th>
 
-<tbody></tbody></table></div></div></div></div></div></div>
+</tr>
+</thead>
+</table>
+</div>
+</div>
 </section>
 </div>
 </div>
@@ -571,7 +562,6 @@ tr.shown td.details-control:before {
 
 </div>
 
-{{data}}
 
 <button type="button" id="feedback-btn" class="btn btn-info" style="transform-origin: 100% 100%; position: fixed; right: 2%; bottom: 6%; z-index: 100;">
 Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
@@ -647,13 +637,15 @@ Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></sp
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
 <script>
 
-var factory_charts = {'total': 7, 'eqgroup': [{'count': 1, 'group': 'E331A', 'change': -30.2}, {'count': 1, 'group': 'E361A', 'change': -7.6}, {'count': 1, 'group': 'E361B', 'change': -0.1}, {'count': 1, 'group': 'E361D', 'change': -7.3}, {'count': 1, 'group': 'E361E', 'change': -5.5}, {'count': 1, 'group': 'E866C', 'change': -1.1}], 'generic': {'Jenerik': [4, '% 57.1'], 'Orijinal': [2, '% 28.6'], 'Yirmi Yıl': [1, '% 14.3']}, 'imported': {'Yerli': [5, '% 71.4'], 'İthal': [2, '% 28.6']}};
 
 function subtable(data) {
+    if (data == ""){
+        return "Ürünün benzeri bulunamadı.";
+    }
     var tbl = document.createElement('table');
     var thead = tbl.createTHead();
     thead.className = "thead-light";
-    ['Ürün Adı', 'Barkod', 'vesaire', 'Değişim'].forEach(function (x) {
+    ['Barkod', 'Ürün Adı', 'Fiyat (€)'].forEach(function (x) {
         var th = document.createElement('th');
         th.innerText = x;
         thead.appendChild(th);
@@ -669,38 +661,32 @@ function subtable(data) {
             cell = row.insertCell();
             cell.innerText = y;
         });
-        var val = parseFloat(cell.innerText);
-        if (isNaN(val)) cell.classList.add("text-info");
-        else if (val<0) {
-            cell.classList.add("text-danger");
-            cell.innerText = '% ' + val.toFixed(1);
-        }
-        else {
-            cell.classList.add("text-success");
-            cell.innerText = '% +' + val.toFixed(1);
-        }
     });
     return tbl.outerHTML;
 }
 
 function format ( d ) {
-    return '<p><strong>Benzer Ürün Adları (subtable olacak)</strong></p>' + d.item1 + subtable(d.item4) + '<br>' +subtable(d.item4)+
-        "<br><p><strong>Ürün detayları:</strong></p>" +
-        '<table class="table .table-sm">'+
-        '<tr><th scope="row">Barkod:</th><td>'+d.item2+'</td></tr>'+
 
-    '</table>';
+        return "<br><p><strong>Ürün detayları:</strong></p>" +
+        '<table class="table .table-sm">' +
+        '<tr><th scope="row">ATC Kodu:</th><td>' + d["ATC KODU "] + '</td></tr>' + 
+        '<tr><th scope="row">Kaynak Ülke:</th><td>' + d["KAYNAK ULKE"]+'</td></tr>' + '</table>' +
+        '</br><p><strong>Benzer Ürünler:</strong></p></br>' + subtable(d["benzer_urun"]);
+
 }
 
 function conf () {
     return {
-        data: [{{data|safe}}],
+        data: {{data|safe}},
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Turkish.json",
         },
         "columns": [
-            {data: "item1", "className": 'details-control'},
-            {data: "item2", "className": 'text-center sorting'},
+            {data: "BARKOD", "className": 'details-control'},
+            {data: "ILAC ADI", "className": 'text-center sorting'},
+            {data: "GERCEK KAYNAK FIYAT (GKF) (\u20ac)", "className": 'text-center sorting'},
+            {data: "ATC KODU ", "visible" : false },
+            {data: "KAYNAK ULKE", "visible" : false },
         ],
         "ordering": true,
         "searching": true,
@@ -714,8 +700,6 @@ function conf () {
     var tbl_prc_ch_eklenen = $('#price-change-eklenen').DataTable(conf());
 
     
-    // Add event listener for opening and closing details
-      // Add event listener for opening and closing details
     $('.price-change tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         if ($(this).closest('table')[0].id == "price-change-eklenen")
@@ -733,13 +717,6 @@ function conf () {
             tr.addClass('shown');
         }
     } );
-
-   
-const div = document.querySelectorAll('.hk-sec-wrapper');
-for (i = 0; i < div.length; i++) {
-    console.log(div[i]);
-  }
-
 
 </script>
                 

@@ -2,54 +2,61 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from pathlib import Path
 from .excel_read import excel_read_and_save
-import pandas as pd
-import datetime 
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+import datetime
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# Create your views here.
 
-def index(request, *args, **kwargs):
-    return render(request, 'index.html',) # <!-- <a href="{% url 'ek4a:json_cikarilan' tarih=25 %}"> -->
+def redirect_to_year(request):
+    my_date = datetime.date.today() 
+    year, week_num, day_of_week = my_date.isocalendar()
+    return HttpResponseRedirect(reverse('ek4a:year-index', args=(year,week_num,)))
 
-def json_duzenlenen(request):
+def index(request,year,week):
+    if (excel_read_and_save('',year,week) == -1):
+        return render(request, '404.html',)
+    return render(request, 'index.html',)
+
+def json_duzenlenen(request,year,week):
     data = {
-        "data":excel_read_and_save('4A DÜZENLENENLER')
+        "data":excel_read_and_save('4A DÜZENLENENLER',year,week)
     }
     return JsonResponse(data)
 
-def json_eklenen(request):
+def json_eklenen(request,year,week):
     data = {
-        "data":excel_read_and_save('4A EKLENENLER')
+        "data":excel_read_and_save('4A EKLENENLER',year,week)
     }
     return JsonResponse(data)
 
-def json_bantcikan(request):
+def json_bantcikan(request,year,week):
     data = {
-       "data":excel_read_and_save('BANT HESABINDAN ÇIKANLAR')
+       "data":excel_read_and_save('BANT HESABINDAN ÇIKANLAR',year,week)
     }
     return JsonResponse(data)
 
-def json_cikarilan(request):
+def json_cikarilan(request,year,week):
     data = {
-        "data":excel_read_and_save('4A ÇIKARILANLAR')
+        "data":excel_read_and_save('4A ÇIKARILANLAR',year,week)
     }
     return JsonResponse(data)
 
-def json_aktiflenen(request):
+def json_aktiflenen(request,year,week):
     data = {
-        "data":excel_read_and_save('4A AKTİFLENENLER')
+        "data":excel_read_and_save('4A AKTİFLENENLER',year,week)
     }
     return JsonResponse(data)
 
-def json_pasiflenen(request):
+def json_pasiflenen(request,year,week):
     data = {
-        "data":excel_read_and_save('4A PASİFLENENLER')
+        "data":excel_read_and_save('4A PASİFLENENLER',year,week)
     }
     return JsonResponse(data)
 
-def json_bant_dahil_edilen(request):
+def json_bant_dahil_edilen(request,year,week):
     data = {
-        "data":excel_read_and_save('4A BANT HESABA DAHİL EDİLENLER')
+        "data":excel_read_and_save('4A BANT HESABA DAHİL EDİLENLER',year,week)
     }
     return JsonResponse(data)
 

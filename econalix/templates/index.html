@@ -1,7 +1,6 @@
 {% load static %}
 <html lang="en"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-172758268-1"></script>
 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Haftanın Özeti</title>
@@ -500,16 +499,23 @@ tr.shown td.details-control:before {
 <div class="hk-pg-header">
 <div class="col-md-2 my-15">
 
+
+<a id="previous-link">
 <i class="ion ion-md-arrow-dropleft-circle"></i>
 <span>Önceki hafta</span>
 </a>
 </div>
 <div class="col-md-8">
-<h5 class="text-center">28/06/2021 - 04/07/2021 arası güncellemeler.</h5>
+<h5 id="tarih-update" class="text-center"></h5>
 </div>
 <div class="col-md-2 text-right mt-15">
+<a id="next-link">
+<span>Sonraki hafta</span>
+<i class="ion ion-md-arrow-dropright-circle"></i>
+</a>
 </div>
 </div>
+
 
 <div class="row">
 <div class="col-xl-12">
@@ -518,17 +524,22 @@ tr.shown td.details-control:before {
 <p class="mb-40"></p>
 <div class="row">
 <div class="col-sm">
-<div id="price-change-factory_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%%;"><thead class="thead-secondary">
-<tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 899.645px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 112.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-factory" rowspan="1" colspan="1" style="width: 196.009px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-eklenen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-factory_info"><thead class="thead-secondary">
-<tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 899.645px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 112.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-factory" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 196.009px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th></tr>
-</thead>
+<table id="price-change-eklenen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
 
-<tbody></tbody></table></div></div></div></div></div></div>
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
 </section>
 </div>
 </div>
-
 
 <div class="row">
 <div class="col-xl-12">
@@ -537,18 +548,22 @@ tr.shown td.details-control:before {
 <p class="mb-40"></p>
 <div class="row">
 <div class="col-sm">
-<div id="price-change-duzenlenen_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%;; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-<tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 899.645px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-center sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 112.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-duzenlenen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-<tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th></tr>
-</thead>
+<table id="price-change-duzenlenen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
 
-<tbody></tbody></table></div></div></div></div></div></div>
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
 </section>
 </div>
 </div>
-
-
 
 <div class="row">
 <div class="col-xl-12">
@@ -557,18 +572,22 @@ tr.shown td.details-control:before {
 <p class="mb-40"></p>
 <div class="row">
 <div class="col-sm">
-<div id="price-change-bantcikan_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-<tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-bantcikan" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-<tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Listeye Giriş Tarihi</div></th></tr>
-</thead>
+<table id="price-change-bantcikan" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
 
-<tbody></tbody></table></div></div></div></div></div></div>
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
 </section>
 </div>
 </div>
-
-
 
 <div class="row">
 <div class="col-xl-12">
@@ -577,72 +596,97 @@ tr.shown td.details-control:before {
 <p class="mb-40"></p>
 <div class="row">
 <div class="col-sm">
-<div id="price-change-bantcikan_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-<tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-cikarilan" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-<tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Tarih</div></th></tr>
-</thead>
+<table id="price-change-cikarilan" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
 
-<tbody></tbody></table></div></div></div></div></div></div>
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
 </section>
 </div>
 </div>
 
 <div class="row">
-    <div class="col-xl-12">
-    <section class="hk-sec-wrapper">
-    <h5 class="hk-sec-title">4A AKTİFLENENLER</h5>
-    <p class="mb-40"></p>
-    <div class="row">
-    <div class="col-sm">
-    <div id="price-change-aktiflenen_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-    <tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-    </thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-aktiflenen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-    <tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Tarih</div></th></tr>
-    </thead>
-    
-    <tbody></tbody></table></div></div></div></div></div></div>
-    </section>
-    </div>
-    </div>
+<div class="col-xl-12">
+<section class="hk-sec-wrapper">
+<h5 class="hk-sec-title">4A AKTİFLENENLER</h5>
+<p class="mb-40"></p>
+<div class="row">
+<div class="col-sm">
+<table id="price-change-aktiflenen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
 
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-12">
+<section class="hk-sec-wrapper">
+<h5 class="hk-sec-title">4A PASİFLENENLER</h5>
+<p class="mb-40"></p>
+<div class="row">
+<div class="col-sm">
+<table id="price-change-pasiflenen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
+
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
+</section>
+</div>
+</div>
     
 
-    <div class="row">
-        <div class="col-xl-12">
-        <section class="hk-sec-wrapper">
-        <h5 class="hk-sec-title">4A PASİFLENENLER</h5>
-        <p class="mb-40"></p>
-        <div class="row">
-        <div class="col-sm">
-        <div id="price-change-pasiflenen_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-        <tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-        </thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-pasiflenen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-        <tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Tarih</div></th></tr>
-        </thead>
-        
-        <tbody></tbody></table></div></div></div></div></div></div>
-        </section>
-        </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-xl-12">
-            <section class="hk-sec-wrapper">
-            <h5 class="hk-sec-title">4A BANT HESABA DAHİL EDİLENLER</h5>
-            <p class="mb-40"></p>
-            <div class="row">
-            <div class="col-sm">
-            <div id="price-change-bant_dahil_edilen_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;"><table class="price-change datatable table table-condensed text-sm dataTable no-footer" role="grid" style="margin-left: 0px; width: 100%;"><thead class="thead-secondary">
-            <tr role="row"><th class="details-control sorting_asc" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending">Ürün adı</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir">Barkod</th><th class="text-right sorting" tabindex="0" aria-controls="price-change-public" rowspan="1" colspan="1" style="width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir">Listeye Giriş Tarihi</th></tr>
-            </thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="price-change-bant_dahil_edilen" class="price-change datatable table table-condensed text-sm dataTable no-footer dtr-inline" role="grid" aria-describedby="price-change-public_info"><thead class="thead-secondary">
-            <tr role="row" style="height: 0px;"><th class="details-control sorting_asc" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 825.099px;" aria-label="Ürün adı: azalan sütun sıralamasını aktifleştir" aria-sort="ascending"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Ürün adı</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 142.372px;" aria-label="Değişim: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Barkod</div></th><th class="text-right sorting" aria-controls="price-change-public" rowspan="1" colspan="1" style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 240.554px;" aria-label="Geçerlilik tarihi: artan sütun sıralamasını aktifleştir"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Tarih</div></th></tr>
-            </thead>
-            
-            <tbody></tbody></table></div></div></div></div></div></div>
-            </section>
-            </div>
-            </div>
+<div class="row">
+<div class="col-xl-12">
+<section class="hk-sec-wrapper">
+<h5 class="hk-sec-title">4A BANT HESABA DAHİL EDİLENLER</h5>
+<p class="mb-40"></p>
+<div class="row">
+<div class="col-sm">
+<table id="price-change-bant_dahil_edilen" class="price-change datatable table table-condensed text-sm">
+<thead class="thead-secondary">
+<tr>
+<th>Ürün adı</th>
+<th>Barkod</th>
+<th>Listeye Giriş Tarihi</th>
+
+
+</tr>
+</thead>
+</table>
+</div>
+</div>
+</section>
+</div>
+</div>
+
 
 
 <div class="hk-footer-wrap container-fluid px-xxl-65 px-xl-20 pt-100">
@@ -744,47 +788,53 @@ Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></sp
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
 <script>
+var yw=window.location.pathname.split("/").slice(-2);
 
-var factory_charts = {'total': 7, 'eqgroup': [{'count': 1, 'group': 'E331A', 'change': -30.2}, {'count': 1, 'group': 'E361A', 'change': -7.6}, {'count': 1, 'group': 'E361B', 'change': -0.1}, {'count': 1, 'group': 'E361D', 'change': -7.3}, {'count': 1, 'group': 'E361E', 'change': -5.5}, {'count': 1, 'group': 'E866C', 'change': -1.1}], 'generic': {'Jenerik': [4, '% 57.1'], 'Orijinal': [2, '% 28.6'], 'Yirmi Yıl': [1, '% 14.3']}, 'imported': {'Yerli': [5, '% 71.4'], 'İthal': [2, '% 28.6']}};
+function getDateOfWeek(weekNumber,year){
+    var today = new Date(year, 0, 4+((weekNumber-1)*7));
+    var previousweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()-7);
+    var previousyear = previousweek.getFullYear();
+    var nextweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()+7);
+    var nextyear = nextweek.getFullYear();
 
-{% comment %} function subtable(data, discountRate) {
-    var tbl = document.createElement('table');
-    var thead = tbl.createTHead();
-    thead.className = "thead-light";
-    ['Ürün Adı', 'Barkod', 'vesaire', 'Değişim'].forEach(function (x) {
-        var th = document.createElement('th');
-        th.innerText = x;
-        thead.appendChild(th);
-    });
-    var tbody = tbl.createTBody();
-    console.log(data)
-    console.log(discountRate)
-    Object.keys(data).forEach(function (x) {
-        var cell = [];
-        var row = tbody.insertRow();
-        cell = row.insertCell();
-        cell.innerText = x;
-        data[x].forEach(function (y) {
-            cell = row.insertCell();
-            cell.innerText = y;
-            cell.className = "text-right";
-        });
-        var val = parseFloat(cell.innerText);
-        if (isNaN(val)) cell.classList.add("text-info");
-        else if (val<0) {
-            cell.classList.add("text-danger");
-            cell.innerText = '% ' + val.toFixed(1);
-        }
-        else {
-            cell.classList.add("text-success");
-            cell.innerText = '% +' + val.toFixed(1);
-        }
-    });
-    return tbl.outerHTML;
-} {% endcomment %}
+    var today_update_date = new Date(today.getFullYear(), today.getMonth(), today.getDate()+1);
+
+    let onejan = new Date(today.getFullYear(), 0, 1);
+    previousweek = Math.ceil((((previousweek.getTime() - onejan.getTime()) / 86400000) + onejan.getDay() -1) / 7);
+    nextweek1 = Math.ceil((((nextweek.getTime() - onejan.getTime()) / 86400000) + onejan.getDay() -1) / 7);
+    previous_url='/ek4a/'+previousyear+'/'+previousweek
+    next_url='/ek4a/'+nextyear+'/'+nextweek1
+    return [previous_url,next_url,today_update_date,nextweek];
+}
+
+window.onload=()=>{
+    var today = new Date();
+    var nexttoday = new Date(yw[0], 0, 4+((yw[1]-1)*7));
+    var nextweek = new Date(nexttoday.getFullYear(), nexttoday.getMonth(), nexttoday.getDate()+7);
+    var date1 = getDateOfWeek(yw[1], yw[0])[2].toISOString().slice(0, 10);
+    var nDate1 = date1.slice(8, 10) + '/' 
+                + date1.slice(5, 7) + '/' 
+                + date1.slice(0, 4);
+    var date2 = getDateOfWeek(yw[1], yw[0])[3].toISOString().slice(0, 10);
+    var nDate2 = date2.slice(8, 10) + '/' 
+                + date2.slice(5, 7) + '/' 
+                + date2.slice(0, 4);
+    document.getElementById("tarih-update").innerHTML = nDate1+ " - "+ nDate2 + " arası güncellemeler.";
+
+    if (today.getTime()<nextweek.getTime()) {
+        document.getElementById("next-link").style.display = 'none';
+    } else {
+        document.getElementById("next-link").href = getDateOfWeek(yw[1], yw[0])[1];
+    }
+    if ( String(getDateOfWeek(yw[1], yw[0])[0]).includes("/ek4a/2021/")){
+        document.getElementById("previous-link").href = getDateOfWeek(yw[1], yw[0])[0];
+    } else {
+        document.getElementById("previous-link").style.display = 'none';
+    }
+ };
 
 function format ( d ) {
-    return '<p><strong>Benzer Ürün Adları (subtable olacak)</strong></p>' + d['Ürün Adı'] + //subtable(d.changes, d.guncel_barkod) +
+    return '<p><strong>Benzer Ürün Adları (subtable olacak)</strong></p>' + d['Ürün Adı'] +
         "<br><p><strong>Ürün detayları:</strong></p>" +
         '<table class="table .table-sm">'+
         '<tr><th scope="row">Barkod:</th><td>'+d['Güncel Barkod']+'</td></tr>'+
@@ -801,7 +851,7 @@ function format ( d ) {
 function conf (type) {
     return {
         "ajax": {
-            "url": "/ek4a/rapor/" + type  + '/',
+            "url": "/ek4a/rapor/" + type  + '/'+ yw[0]+ '/' + yw[1],
             "cache": true
         },
         "language": {
@@ -810,12 +860,12 @@ function conf (type) {
         "columns": [
             {"data": 'Ürün Adı', "className": 'details-control'},
             {"data": 'Güncel Barkod', "className": 'text-center sorting'},
+            {"data": 'Listeye Giriş Tarihi', "className": 'text-right sorting'},
             {"data": 'Kamu No', "visible" : false },
             {"data": 'Eczacı İndirim Oranı ', "visible" : false },
             {"data": 'Eski Barkod-2', "visible" : false },
             {"data": 'Eşdeğer (Benzer) Ürün Grubu', "visible" : false },
             {"data": 'Referans Fiyat Grubu', "visible" : false },
-            {"data": 'Listeye Giriş Tarihi', "className": 'text-right sorting'},
             {"data": 'Aktiflenme Tarihi', "visible" : false },
             {"data": 'Pasiflenme Tarihi', "visible" : false },
             {"data": 'Eski Barkod-1', "visible" : false },
@@ -825,7 +875,7 @@ function conf (type) {
             {"data": 'Depocuya Satış  Fiyatı \n8,26 TL (dahil) ile 15,80 TL (dahil) arasında ise', "visible" : false },
             {"data": 'Depocuya Satış Fiyatı \n8,25 TL ve altında ise', "visible" : false },
             {"data": 'Özel İskonto', "visible" : false },
-            {"data": ' Band Hesabı Takibinin Başlangıç Tarihi', "visible" : false },
+            {"data": 'Band Hesabı Takibinin Başlangıç Tarihi', "visible" : false },
             {"data": 'Firma Tarafından Dağıtım Belgesinin Bildirileceği Son Tarih', "visible" : false },
 
 
@@ -878,12 +928,6 @@ function conf (type) {
             tr.addClass('shown');
         }
     } );
-
-   
-const div = document.querySelectorAll('.hk-sec-wrapper');
-for (i = 0; i < div.length; i++) {
-    console.log(div[i]);
-  }
 
 
 </script>

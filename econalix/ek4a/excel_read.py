@@ -2,20 +2,19 @@ import pandas as pd
 from pathlib import Path
 import json, os
 
-def excel_read_and_save(pageName):
+def excel_read_and_save(pageName,year,week):
     try:
-        xls = pd.read_excel('.\\.\\excel_file\\ek_4A_13.05.2021.xlsx',sheet_name=pageName)
+        sheet_name='.\\.\\excel_file\\'+str(year)+'-'+str(week)+'.xlsx'
+        xls = pd.read_excel(sheet_name,sheet_name=pageName)
         df = pd.DataFrame(xls, columns=xls.columns)
         df = df.assign( **df.select_dtypes(['datetime']).astype(str).to_dict('list') ).to_json(orient="records")
         parsed = json.loads(df)
     except ValueError as e:
         print( e)
         parsed = []    
-    
-    return parsed
+    except FileNotFoundError as e:
+        print( e)
+        return -1  
 
-    #sheet_to_df = {}
-    #for sheet_name in xls.sheet_names:
-    #    sheet_to_df[sheet_name] = xls.parse(sheet_name)  
-    #return sheet_to_df     
+    return parsed
         

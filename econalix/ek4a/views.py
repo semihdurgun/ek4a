@@ -1,12 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from pathlib import Path
 from .excel_read import excel_read_and_save
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 import datetime
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 def redirect_to_year(request):
     my_date = datetime.date.today() 

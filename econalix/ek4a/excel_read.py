@@ -5,8 +5,7 @@ from econalix.settings import BASE_DIR
 
 def excel_read_and_save(pageName,year,week):
     try:
-        url = '\\excel_file\\' + str(year)+ '-' + str(week) + '.xlsx'
-        sheet_name = str(BASE_DIR) +  url
+        sheet_name = BASE_DIR / ('excel_file' + "\\"+ str(year) + '-' + str(week) + '.xlsx')
         xls = pd.read_excel(sheet_name,sheet_name=pageName)
         df = pd.DataFrame(xls, columns=xls.columns)
         df = df.assign( **df.select_dtypes(['datetime']).astype(str).to_dict('list') ).to_json(orient="records")

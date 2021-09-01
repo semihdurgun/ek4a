@@ -643,6 +643,7 @@ function subtable(data) {
         return "    Ürünün benzeri bulunamadı.";
     }
     var tbl = document.createElement('table');
+    tbl.style.width = '100%';
     var thead = tbl.createTHead();
     thead.className = "thead-light";
     ['Barkod', 'Ürün Adı', 'Fiyat (€)'].forEach(function (x) {

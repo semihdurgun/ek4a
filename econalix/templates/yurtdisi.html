@@ -640,7 +640,7 @@ Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></sp
 
 function subtable(data) {
     if (data == ""){
-        return "Ürünün benzeri bulunamadı.";
+        return "    Ürünün benzeri bulunamadı.";
     }
     var tbl = document.createElement('table');
     var thead = tbl.createTHead();
@@ -671,7 +671,12 @@ function format ( d ) {
         '<table class="table .table-sm">' +
         '<tr><th scope="row">ATC Kodu:</th><td>' + d["ATC KODU "] + '</td></tr>' + 
         '<tr><th scope="row">Kaynak Ülke:</th><td>' + d["KAYNAK ULKE"]+'</td></tr>' + '</table>' +
-        '</br><p><strong>Benzer Ürünler:</strong></p></br>' + subtable(d["benzer_urun"]);
+        '</br><p><strong>Yunanistan Benzer Ürünler:</strong>' + 
+        subtable(d["benzer_urun"]) + '</p></br>'+
+        '</br><p><strong>İtalya Benzer Ürünler:</strong>' +  
+        subtable(d["italya_benzer_urun"]) + '</p></br>'+
+        '</br><p><strong>İspanya Benzer Ürünler:</strong>' +  
+        subtable(d["ispanya_benzer_urun"]) + '</p></br>';
 
 }
 

@@ -10,3 +10,10 @@ def index(request, *args, **kwargs):
       data = json.loads(f.read())
 
     return render(request, 'yurtdisi.html',{'data':data}) 
+
+def index2(request, *args, **kwargs):
+
+    with open(BASE_DIR / 'greece-italy-spain_optimizationed.json', 'r') as f:
+      data = json.loads(f.read())
+
+    return render(request, 'yurtdisi.html',{'data':data}) 

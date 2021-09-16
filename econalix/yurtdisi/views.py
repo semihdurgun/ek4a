@@ -6,14 +6,14 @@ import json
 
 def index(request, *args, **kwargs):
 
-    with open(BASE_DIR / 'greece-italy-spain.json', 'r') as f:
+    with open(BASE_DIR / 'ALL.json', 'r') as f:
       data = json.loads(f.read())
 
     return render(request, 'yurtdisi.html',{'data':data}) 
 
 def optimizationed(request, *args, **kwargs):
 
-    with open(BASE_DIR / 'greece-italy-spain_optimizationed.json', 'r') as f:
+    with open(BASE_DIR / 'ALL_optimizationed.json', 'r') as f:
       data = json.loads(f.read())
 
     return render(request, 'yurtdisi.html',{'data':data}) 

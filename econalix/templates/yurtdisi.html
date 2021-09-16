@@ -638,7 +638,7 @@ Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></sp
 <script>
 
 
-function subtable(data) {
+function subtable(data,country) {
     if (data == ""){
         return "    Ürünün benzeri bulunamadı.";
     }
@@ -646,11 +646,22 @@ function subtable(data) {
     tbl.style.width = '100%';
     var thead = tbl.createTHead();
     thead.className = "thead-light";
-    ['Barkod', 'Ürün Adı', 'Fiyat (€)'].forEach(function (x) {
+    if (country == "fransa"){
+        ['Barkod', 'Ürün Adı', 'Fiyat (€)','Geri Ödeme Oranı'].forEach(function (x) {
         var th = document.createElement('th');
         th.innerText = x;
         thead.appendChild(th);
-    });
+        });
+    }
+    else{
+        ['Barkod', 'Ürün Adı', 'Fiyat (€)'].forEach(function (x) {
+        var th = document.createElement('th');
+        th.innerText = x;
+        thead.appendChild(th);
+        });
+    }
+    
+
     var tbody = tbl.createTBody();
     
     Object.keys(data).forEach(function (x) {
@@ -673,11 +684,15 @@ function format ( d ) {
         '<tr><th scope="row">ATC Kodu:</th><td>' + d["ATC KODU "] + '</td></tr>' + 
         '<tr><th scope="row">Kaynak Ülke:</th><td>' + d["KAYNAK ULKE"]+'</td></tr>' + '</table>' +
         '</br><p><strong>Yunanistan Benzer Ürünler:</strong>' + 
-        subtable(d["benzer_urun"]) + '</p></br>'+
+        subtable(d["yunanistan_benzer_urun"],'yunanistan') + '</p></br>'+
+        '</br><p><strong>Portekiz Benzer Ürünler:</strong>' + 
+        subtable(d["portekiz_benzer_urun"],'portekiz') + '</p></br>'+
         '</br><p><strong>İtalya Benzer Ürünler:</strong>' +  
-        subtable(d["italya_benzer_urun"]) + '</p></br>'+
+        subtable(d["italya_benzer_urun"],'italya') + '</p></br>'+
         '</br><p><strong>İspanya Benzer Ürünler:</strong>' +  
-        subtable(d["ispanya_benzer_urun"]) + '</p></br>';
+        subtable(d["ispanya_benzer_urun"],'ispanya') + '</p></br>' + 
+        '</br><p><strong>Fransa Benzer Ürünler:</strong>' +  
+        subtable(d["fransa_benzer_urun"],'fransa') + '</p></br>' ;
 
 }
 

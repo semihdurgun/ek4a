@@ -1,6 +1,6 @@
 from django.http.response import JsonResponse
 from django.urls import path
-from .views import index, index2
+from .views import index, optimizationed
 from django.conf.urls.static import static
 from django.conf import settings
 

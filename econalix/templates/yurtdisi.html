@@ -18,11 +18,24 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<link href="https://econalix.net/static/dist/css/style.302d952406c8.css" rel="stylesheet" type="text/css">
+<link href="https://econalix.net/static/dist/css/style.css" rel="stylesheet" type="text/css">
 <link href="https://econalix.net/static/tellme/feedback.min.5eac1cd1c82c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css">
+<script> 
+document.querySelectorAll('details').forEach((D,_,A)=>{
+  D.ontoggle =_=>{ if(D.open) A.forEach(d =>{ if(d!=D) d.open=false })}
+})
+</script>
 <style>
+
+details > summary {
+  list-style: none;
+  display:inline-block;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 table.dataTable thead th,
 table.dataTable thead td,
 table.dataTable tbody th,
@@ -60,6 +73,42 @@ td.details-control:before {
 tr.shown td.details-control:before {
     content: "-";
     background-color: #d33333;
+}
+.flag {
+  display: inline-block;
+  width: 29px;
+  height: 23px;
+  border-radius: 40%;
+  background-color: #eee;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.flags{ 
+ display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-size: 100%;
+}
+
+.gr {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PG1hc2sgaWQ9ImEiPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiNlZWUiIGQ9Ik0wIDEyMi41IDg5IDBoNjdsMzU2IDU1Ljd2NjYuN2wtMjguNCAzMy41IDI4LjQgMzMuM1YyNTZsLTI2LjYgMzIuMiAyNi42IDM0LjZ2NjYuOEw0ODUgNDIxbDI3IDM1LjNWNTEySDB2LTU1LjdsMjcuMi0zNC4yTDAgMzg5LjZ2LTY2LjhMMzAuNiAyNTEgMCAxODkuMnoiLz48cGF0aCBmaWxsPSIjMzM4YWYzIiBkPSJNMCAwdjEyMi41aDg5VjB6bTE1NS45IDB2MTIyLjRIMjU2VjU1LjdoMjU2VjBIMTU1Ljl6TTI1NiAxMjIuNHY2Ni44aDI1NnYtNjYuOHptMCA2Ni44SDE1NS45VjI1Nkg4OXYtNjYuOEgwdjEzMy42aDUxMlYyNTZIMjU2ek0wIDM4OS42djY2LjdoNTEydi02Ni43eiIvPjwvZz48L3N2Zz4=");
+}
+
+.pt {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PG1hc2sgaWQ9ImEiPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM2ZGE1NDQiIGQ9Ik0wIDUxMmgxNjdsMzcuOS0yNjAuM0wxNjcgMEgweiIvPjxwYXRoIGZpbGw9IiNkODAwMjciIGQ9Ik01MTIgMEgxNjd2NTEyaDM0NXoiLz48Y2lyY2xlIGN4PSIxNjciIGN5PSIyNTYiIHI9Ijg5IiBmaWxsPSIjZmZkYTQ0Ii8+PHBhdGggZmlsbD0iI2Q4MDAyNyIgZD0iTTExNi45IDIxMS41VjI2N2E1MCA1MCAwIDEgMCAxMDAuMSAwdi01NS42SDExN3oiLz48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMTY3IDI4My44Yy05LjIgMC0xNi43LTcuNS0xNi43LTE2LjdWMjQ1aDMzLjR2MjJjMCA5LjItNy41IDE2LjctMTYuNyAxNi43eiIvPjwvZz48L3N2Zz4=");
+}
+
+.it {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PG1hc2sgaWQ9ImEiPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiNlZWUiIGQ9Ik0xNjcgMGgxNzhsMjUuOSAyNTIuM0wzNDUgNTEySDE2N2wtMjkuOC0yNTMuNHoiLz48cGF0aCBmaWxsPSIjNmRhNTQ0IiBkPSJNMCAwaDE2N3Y1MTJIMHoiLz48cGF0aCBmaWxsPSIjZDgwMDI3IiBkPSJNMzQ1IDBoMTY3djUxMkgzNDV6Ii8+PC9nPjwvc3ZnPg==");
+}
+
+.es {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PG1hc2sgaWQ9ImEiPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxtYXNrIGlkPSJiIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYwIDI3MnYyNGEyNCAyNCAwIDAgMCAyNCAyNCAyNCAyNCAwIDAgMCAyNC0yNHYtMjRoLTI0eiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjZDgwMDI3IiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBmaWxsPSIjZmZkYTQ0IiBkPSJNMCAxMjhoNTEydjI1NkgweiIvPjxnIGZpbGw9IiNlZWUiPjxwYXRoIGQ9Ik0xNDQgMzA0aC0xNnYtODBoMTZ6bTEyOCAwaDE2di04MGgtMTZ6Ii8+PGVsbGlwc2UgY3g9IjIwOCIgY3k9IjI5NiIgcng9IjQ4IiByeT0iMzIiLz48L2c+PGcgZmlsbD0iI2Q4MDAyNyI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjI0IiB4PSIxMjgiIHk9IjE5MiIgcng9IjgiLz48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMjQiIHg9IjI3MiIgeT0iMTkyIiByeD0iOCIvPjxwYXRoIGQ9Ik0yMDggMjcydjI0YTI0IDI0IDAgMCAwIDI0IDI0IDI0IDI0IDAgMCAwIDI0LTI0di0yNGgtMjR6Ii8+PC9nPjxnIGZpbGw9IiNmZjk4MTEiPjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIxNiIgeD0iMTIwIiB5PSIyMDgiIHJ5PSI4Ii8+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjE2IiB4PSIyNjQiIHk9IjIwOCIgcnk9IjgiLz48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMTYiIHg9IjEyMCIgeT0iMzA0IiByeD0iOCIvPjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIxNiIgeD0iMjY0IiB5PSIzMDQiIHJ4PSI4Ii8+PHBhdGggZD0iTTE2MCAyNzJ2MjRhMjQgMjQgMCAwIDAgMjQgMjQgMjQgMjQgMCAwIDAgMjQtMjR2LTI0aC0yNHoiLz48L2c+PHBhdGggZD0iTTEyMiAyNTJoMTcybS0xNzIgMjRoMjhtMTE2IDBoMjgiLz48cGF0aCBmaWxsPSIjZDgwMDI3IiBkPSJNMTIyIDI0OGE0IDQgMCAwIDAtNCA0IDQgNCAwIDAgMCA0IDRoMTcyYTQgNCAwIDAgMCA0LTQgNCA0IDAgMCAwLTQtNHptMCAyNGE0IDQgMCAwIDAtNCA0IDQgNCAwIDAgMCA0IDRoMjhhNCA0IDAgMCAwIDQtNCA0IDQgMCAwIDAtNC00em0xNDQgMGE0IDQgMCAwIDAtNCA0IDQgNCAwIDAgMCA0IDRoMjhhNCA0IDAgMCAwIDQtNCA0IDQgMCAwIDAtNC00eiIvPjxwYXRoIGZpbGw9IiNlZWUiIGQ9Ik0xOTYgMTY4Yy03IDAtMTMgNS0xNSAxMWwtNS0xYy05IDAtMTYgNy0xNiAxNnM3IDE2IDE2IDE2YzcgMCAxMy00IDE1LTExYTE2IDE2IDAgMCAwIDE3LTQgMTYgMTYgMCAwIDAgMTcgNCAxNiAxNiAwIDEgMCAxMC0yMCAxNiAxNiAwIDAgMC0yNy01Yy0zLTQtNy02LTEyLTZ6bTAgOGM1IDAgOCA0IDggOCAwIDUtMyA4LTggOC00IDAtOC0zLTgtOCAwLTQgNC04IDgtOHptMjQgMGM1IDAgOCA0IDggOCAwIDUtMyA4LTggOC00IDAtOC0zLTgtOCAwLTQgNC04IDgtOHptLTQ0IDEwIDQgMSA0IDhjMCA0LTQgNy04IDdzLTgtMy04LThjMC00IDQtOCA4LTh6bTY0IDBjNSAwIDggNCA4IDggMCA1LTMgOC04IDgtNCAwLTgtMy04LTdsNC04IDQtMXoiLz48cGF0aCBmaWxsPSJub25lIiBkPSJNMjIwIDI4NHYxMmMwIDcgNSAxMiAxMiAxMnMxMi01IDEyLTEydi0xMnoiLz48cGF0aCBmaWxsPSIjZmY5ODExIiBkPSJNMjAwIDE2MGgxNnYzMmgtMTZ6Ii8+PHBhdGggZmlsbD0iI2VlZSIgZD0iTTIwOCAyMjRoNDh2NDhoLTQ4eiIvPjxnIGZpbGw9IiNkODAwMjciPjxwYXRoIGQ9Im0yNDggMjA4LTggOGgtNjRsLTgtOGMwLTEzIDE4LTI0IDQwLTI0czQwIDExIDQwIDI0em0tODggMTZoNDh2NDhoLTQ4eiIvPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIzMiIgeD0iMjIyIiB5PSIyMzIiIHJ4PSIxMCIgcnk9IjEwIi8+PGcgbWFzaz0idXJsKCNiKSI+PHBhdGggZD0iTTE3MCAyNzJoMTB2NDhoLTEwem0xOSAwaDEwdjQ4aC0xMHoiLz48L2c+PC9nPjxwYXRoIGZpbGw9IiNmZjk4MTEiIGQ9Ik0xNjggMjMydjhoOHYxNmgtOHY4aDMydi04aC04di0xNmg4di04em04LTE2aDY0djhoLTY0eiIvPjxnIGZpbGw9IiNmZmRhNDQiPjxjaXJjbGUgY3g9IjE4NiIgY3k9IjIwMiIgcj0iNiIvPjxjaXJjbGUgY3g9IjIwOCIgY3k9IjIwMiIgcj0iNiIvPjxjaXJjbGUgY3g9IjIzMCIgY3k9IjIwMiIgcj0iNiIvPjwvZz48ZyBmaWxsPSIjMzM4YWYzIj48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNzIiIHI9IjE2Ii8+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjE2IiB4PSIyNjQiIHk9IjMyMCIgcnk9IjgiLz48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMTYiIHg9IjEyMCIgeT0iMzIwIiByeT0iOCIvPjwvZz48L2c+PC9zdmc+");
+}
+
+.fr {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PG1hc2sgaWQ9ImEiPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiNlZWUiIGQ9Ik0xNjcgMGgxNzhsMjUuOSAyNTIuM0wzNDUgNTEySDE2N2wtMjkuOC0yNTMuNHoiLz48cGF0aCBmaWxsPSIjMDA1MmI0IiBkPSJNMCAwaDE2N3Y1MTJIMHoiLz48cGF0aCBmaWxsPSIjZDgwMDI3IiBkPSJNMzQ1IDBoMTY3djUxMkgzNDV6Ii8+PC9nPjwvc3ZnPg==");
 }
 </style>
 <script data-ad-client="ca-pub-9531859491720497" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -639,8 +688,9 @@ Geri bildirim <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></sp
 
 
 function subtable(data,country) {
+ 
     if (data == ""){
-        return "    Ürünün benzeri bulunamadı.";
+        return "<br>Ürünün benzeri bulunamadı.";
     }
     var tbl = document.createElement('table');
     tbl.style.width = '100%';
@@ -674,25 +724,20 @@ function subtable(data,country) {
             cell.innerText = y;
         });
     });
-    return tbl.outerHTML;
+    return "<br>"+tbl.outerHTML;
 }
 
 function format ( d ) {
 
-        return "<br><p><strong>Ürün detayları:</strong></p>" +
+ return "<br><p><strong>Ürün detayları:</strong></p>" +
         '<table class="table .table-sm">' +
         '<tr><th scope="row">ATC Kodu:</th><td>' + d["ATC KODU "] + '</td></tr>' + 
         '<tr><th scope="row">Kaynak Ülke:</th><td>' + d["KAYNAK ULKE"]+'</td></tr>' + '</table>' +
-        '</br><p><strong>Yunanistan Benzer Ürünler:</strong>' + 
-        subtable(d["yunanistan_benzer_urun"],'yunanistan') + '</p></br>'+
-        '</br><p><strong>Portekiz Benzer Ürünler:</strong>' + 
-        subtable(d["portekiz_benzer_urun"],'portekiz') + '</p></br>'+
-        '</br><p><strong>İtalya Benzer Ürünler:</strong>' +  
-        subtable(d["italya_benzer_urun"],'italya') + '</p></br>'+
-        '</br><p><strong>İspanya Benzer Ürünler:</strong>' +  
-        subtable(d["ispanya_benzer_urun"],'ispanya') + '</p></br>' + 
-        '</br><p><strong>Fransa Benzer Ürünler:</strong>' +  
-        subtable(d["fransa_benzer_urun"],'fransa') + '</p></br>' ;
+        '<details><summary><p><i class="gr flags"></i><span style="position: relative;top:-20px;font-weight: bold;">  Yunanistan</span></summary><p>' + subtable(d["yunanistan_benzer_urun"],'yunanistan') + '</p></details><hr>' + 
+        '<details><summary><i class="pt flags"></i><span style="position: relative;top:-20px;font-weight: bold;">  Portekiz</span></summary><p>' + subtable(d["portekiz_benzer_urun"],'portekiz') + '</p></details><hr>' +
+        '<details><summary><i class="it flags"></i><span style="position: relative;top:-20px;font-weight: bold;">  İtalya</span></summary><p>' + subtable(d["italya_benzer_urun"],'italya') + '</p></details><hr>' +
+        '<details><summary><i class="es flags"></i><span style="position: relative;top:-20px;font-weight: bold;">  İspanya</span></summary><p>' + subtable(d["ispanya_benzer_urun"],'ispanya') + '</p></details><hr>' +
+        '<details><summary><i class="fr flags"></i><span style="position: relative;top:-20px;font-weight: bold;">  Fransa</span></summary><p>' + subtable(d["fransa_benzer_urun"],'fransa') + '</p></details><hr>';
 
 }
 
@@ -739,6 +784,7 @@ function conf () {
         }
     } );
 
+    
 </script>
                 
 </body></html>

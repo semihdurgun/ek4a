@@ -6,7 +6,7 @@ import json
 
 def index(request, *args, **kwargs):
 
-    with open(BASE_DIR / 'ALL.json', 'r') as f:
+    with open(BASE_DIR / 'tum_ulkeler_eslesmeyen_haric.json', 'r') as f:
       data = json.loads(f.read())
 
     return render(request, 'yurtdisi.html',{'data':data}) 
